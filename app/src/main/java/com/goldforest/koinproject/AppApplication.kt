@@ -1,8 +1,7 @@
 package com.goldforest.koinproject
 
 import android.app.Application
-import com.goldforest.datalibrary.di.appModule2
-import com.goldforest.koinproject.di.appModule
+import com.goldforest.koinproject.di.DiModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -13,7 +12,7 @@ class AppApplication : Application() {
 
         startKoin {
             androidContext(this@AppApplication)
-            modules(listOf(appModule, appModule2))
+            modules(DiModule)
         }
     }
 

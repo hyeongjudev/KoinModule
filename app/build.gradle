@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -40,5 +44,13 @@ dependencies {
     implementation "org.koin:koin-android-scope:$koin_version"
     // Koin Android ViewModel feature
     implementation "org.koin:koin-android-viewmodel:$koin_version"
+    
     implementation project(path: ':datalibrary')
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+    implementation "com.squareup.retrofit2:retrofit-mock:2.4.0"
+
 }
